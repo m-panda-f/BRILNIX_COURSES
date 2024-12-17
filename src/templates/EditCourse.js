@@ -71,6 +71,11 @@ const EditCourse = () => {
     setVideos((prevVideos) => [...prevVideos, { videoTitle: "", videoLink: "" }]);
   };
 
+  // Delete a video field
+  const handleDeleteVideo = (index) => {
+    setVideos((prevVideos) => prevVideos.filter((_, i) => i !== index));
+  };
+
   // Save updated course details
   const handleSave = async (e) => {
     e.preventDefault();
@@ -162,6 +167,13 @@ const EditCourse = () => {
               onChange={(e) => handleVideoChange(index, e)}
               required
             />
+            <button
+              type="button"
+              onClick={() => handleDeleteVideo(index)}
+              style={{ marginLeft: "10px", color: "red" }}
+            >
+              Delete Video
+            </button>
           </div>
         ))}
         <button type="button" onClick={addVideoField}>Add Another Video</button>

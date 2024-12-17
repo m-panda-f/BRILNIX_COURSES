@@ -7,7 +7,6 @@ import EditCourse from "./templates/EditCourse"; // Used for both creating and e
 import VideoDetails from "./templates/VideoDetails";
 import Login from "./authentication/login"; // Login Page
 import Signup from "./authentication/signup"; // Signup Page
-import ViewVideo from "./templates/viewvideo";
 
 const App = () => {
   return (
@@ -18,7 +17,7 @@ const App = () => {
 
         {/* Course List Page */}
         <Route path="/course-list" element={<CourseListPage />} />
-        <Route path="/view-video" element={<ViewVideo/>}/>
+       
 
 
         {/* Course creation form */}
