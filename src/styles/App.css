@@ -11,6 +11,7 @@ body {
   overflow: hidden;
 }
 
+
 /* Main container styling */
 .container {
   width: 100%;
@@ -132,33 +133,133 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Media Queries */
+/* Logout Button Container */
+.logout-container {
+  text-align: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
 
-/* Mobile Screens: max-width 768px */
+.logout-container button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-container button:hover {
+  background-color: #d32f2f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scrollable Form Container */
+.form-container {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Video input group styles */
+.video-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.video-input-group input {
+  margin-bottom: 5px;
+}
+
+.video-input-group button {
+  margin-top: 5px;
+  background-color: red;
+}
+/* Responsive Mobile View */
 @media screen and (max-width: 768px) {
   body {
     display: block;
-    padding: 10px;
     height: auto;
+    overflow-y: auto;
   }
 
   .container {
-    padding: 15px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   form {
     padding: 20px;
     max-width: 100%;
+    box-sizing: border-box;
+    margin: 10px auto;
+    box-shadow: none;
   }
 
   .home-page {
-    flex-direction: column;
+    display: block;
     padding: 20px;
   }
 
   .home-option {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .logout-container {
+    position: static;
+    margin: 10px 0;
+    text-align: center;
   }
 
   input,
@@ -168,42 +269,13 @@ button:hover {
     padding: 10px;
   }
 
-  button {
-    font-size: 14px;
-    padding: 10px 12px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-}
-
-/* Small Mobile Screens: max-width 480px */
-@media screen and (max-width: 480px) {
-  form {
+  .form-container {
+    max-height: none;
     padding: 15px;
+    overflow-y: visible;
   }
 
-  label {
-    font-size: 12px;
-  }
-
-  input,
-  textarea {
-    padding: 8px;
-    font-size: 12px;
-  }
-
-  button {
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-
-  h3 {
-    font-size: 16px;
-  }
-
-  .home-option {
-    padding: 15px;
+  .video-input-group {
+    flex-direction: column;
   }
 }
