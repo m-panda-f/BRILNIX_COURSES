@@ -1,0 +1,99 @@
+/* General Page Styling */
+.course-list {
+    padding: 20px;
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+  }
+  
+  .course-list h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* List Container */
+  .course-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .course-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .course-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Course Image */
+  .course-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  /* Course Information */
+  .course-item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .course-info h2 {
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .course-info p {
+    margin: 5px 0;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  }
+  
+  .delete-btn:hover {
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .course-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .delete-btn {
+      margin-top: 10px;
+    }
+  }
+  
